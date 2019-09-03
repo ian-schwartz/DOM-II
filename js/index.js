@@ -6,6 +6,14 @@ logoScale.addEventListener('mouseover', e => {
     logoScale.style.transform = 'scale(1.2)';
 });
 // 2) Click
+const headerTitleChange = document.querySelector('.logo-heading');
+
+headerTitleChange.addEventListener('click', e => {
+    headerTitleChange.style.color = 'red';
+    // Stop Propagation
+    event.stopPropagation();
+});
+
 const headerChange = document.querySelector('.main-navigation');
 
 headerChange.addEventListener('click', e => {
@@ -52,6 +60,9 @@ const textColorBack = document.querySelector('.content-destination');
 textColorBack.addEventListener('mouseleave', e => {
     textColorBack.style.color = "black";
 });
-
-
+// Prevent Default Action
+const links = document.querySelectorAll('.nav-link');
+links.addEventListener('click', e => {
+    e.preventDefault();
+});
 
