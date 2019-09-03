@@ -23,8 +23,35 @@ window.addEventListener('resize', e => {
     bgChange.style.background = 'lightblue';
 })
 // 5) Keydown
-window.addEventListener('keyup', e => {
+window.addEventListener('keydown', e => {
     const headingZoom = document.querySelector('.intro-heading');
     headingZoom.style.fontSize = '7rem';
 });
+// 6) Keyup
+window.addEventListener('keyup', e => {
+    const contentHeadingZoom = document.querySelector('.content-heading');
+    contentHeadingZoom.style.fontSize = '7rem';
+});
+// 7) Load
+window.addEventListener('load', e => {
+    const footerBg = document.querySelector('.footer');
+    footerBg.style.background = '#fcba03';
+});
+// 8) Scroll
+window.addEventListener('scroll', e => {
+    const headingChange = document.querySelector('.bottom-content-heading');
+    headingChange.textContent = 'Adventure Lies Ahead';
+});
+// 9) Mouseenter
+const textColor = document.querySelector('.content-destination');
+textColor.addEventListener('mouseenter', e => {
+    textColor.style.color = "red";
+});
+// 10) Mouseleave
+const textColorBack = document.querySelector('.content-destination');
+textColorBack.addEventListener('mouseleave', e => {
+    textColorBack.style.color = "black";
+});
+
+
 
